@@ -43,21 +43,12 @@ public class BaseTests {
 
   @AfterClass
   public static void tearDown() {
-      try {
-          // all checks done - wrap up test
-          eyes.closeAsync();
-          // all tests done - wrap up test suite
-          TestResultSummary allTestResults = runner.getAllTestResults(throwExceptionOnFailure);
-          TestResultContainer[] results = allTestResults.getAllResults();
-      } finally {
-          driver.quit();
-      }
+      driver.quit();
   }
 
   private static void initializeEyes() {
-    VisualGridRunner runner = new VisualGridRunner(20);
-    eyes = new Eyes();
-    Eyes eyes = new Eyes(runner);
+    //eyes = new Eyes();
+    eyes = new Eyes(new VisualGridRunner(20));
     eyes.setApiKey(System.getProperty("applitools.api.key"));
     eyes.setConfiguration(VisualGridConfig.getGrid("Bookstore", "Grid-Test"));
   }

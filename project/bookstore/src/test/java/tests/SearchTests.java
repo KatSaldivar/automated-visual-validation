@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import java.lang.annotation.Target;
 
 //https://www.pnsqc.org/w02-introduction-to-automated-visual-validation/
+//file:///Users/katherinesaldivar/Documents/GitHub/automated-visual-testing/project/website/index.html
 
 public class SearchTests extends BaseTests {
 
