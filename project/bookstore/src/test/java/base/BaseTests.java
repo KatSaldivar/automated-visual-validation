@@ -104,10 +104,10 @@ public class BaseTests {
     }
 
   private static void initializeEyes() {
-    //eyes = new Eyes();
-    eyes = new Eyes(new VisualGridRunner(20));
+    eyes = new Eyes();
+    //eyes = new Eyes(new VisualGridRunner(20));
     eyes.setApiKey(System.getProperty("applitools.api.key"));
-    eyes.setConfiguration(VisualGridConfig.getGrid("Automation Bookstore", "testSearchByFullTitle"));
+    //eyes.setConfiguration(VisualGridConfig.getGrid("Automation Bookstore", "testSearchByFullTitle"));
   }
 
   protected void validateWindow() {
